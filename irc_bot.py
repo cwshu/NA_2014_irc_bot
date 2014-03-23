@@ -96,7 +96,7 @@ class IrcBot():
         if dialog.startswith("@cal"):
             val = cal(dialog[len("@cal "):])
 
-            if type(val) == int:
+            if type(val) in (int, float, complex):
                 msg = val
             elif val == "overflow":
                 msg = "overflow"
